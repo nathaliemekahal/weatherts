@@ -92,12 +92,6 @@ export default function Results({ data }: result) {
             <h3 id="temp">
               {Math.floor(data.main.temp - 273.15)}{" "}
               <span style={{ fontSize: "60px" }}>°C</span>
-              {/* Feels like{" "}
-              {data.main.feels_like - 273.15}
-              <br />
-              {data.main.humidity}
-              <br />
-              */}
             </h3>
             {data.weather[0]["main"] === "Clear" && (
               <img className="circle ml-5" src="sun.svg" width="300px" alt="" />
