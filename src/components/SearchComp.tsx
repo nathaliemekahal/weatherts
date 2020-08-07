@@ -72,7 +72,7 @@ export default function SearchComp() {
     <>
       <div className="circle-bg"></div>
       <div className="circle-bg2"></div>
-      <Row className="justify-content-end mt-2 ">
+      <Row className="justify-content-start mt-2 ">
         <Form inline>
           <FormControl
             type="text"

@@ -11,7 +11,7 @@ body {
   opacity: 0.8;
   border-radius: 50%;
   position: absolute;
-  left: -18px;
+  left: 631px;
   top: -500px;
 }
 .circle-bg2 {
@@ -52,13 +52,22 @@ body {
   animation: circle 6s linear infinite;
   display: flex;
   justify-content: center;
+  margin-right: -362px;
+}
+/*TEMP*/
+#temp {
+  position: absolute;
+  right: 3px;
+  top: 1px;
+  font-size: 120px;
+  font-weight: 400;
 }
 
 @keyframes circle {
   0% {
-    transform: rotate(0deg) translate(-165px) rotate(0deg);
+    transform: rotate(0deg) translate(-100px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translate(-165px) rotate(-360deg);
+    transform: rotate(360deg) translate(-100px) rotate(-360deg);
   }
 }

@@ -59,25 +59,32 @@ interface SearchQuery {
 export default function Results({ data }: result) {
   return (
     <>
-      {data.id !== 0 && (
-        <Row md={2} className="results-wrapper">
-          <Col className="title-col-container">
-            <h1 className="title-class">{data.name}</h1>
-          </Col>
+      {/* {data.id !== 0 && ( */}
+      <Row md={2} className="results-wrapper">
+        <Col className="title-col-container">
+          <h1 className="title-class">{data.name}</h1>
+        </Col>
 
-          <Col className="clipart-col-container">
-            <div>
-              {data.main.temp - 273.15}Feels like{" "}
+        <Col className="clipart-col-container">
+          <h3 id="temp">
+            {/* {Math.floor(data.main.temp - 273.15)} */}
+            12
+            {/* Feels like{" "}
               {data.main.feels_like - 273.15}
               <br />
               {data.main.humidity}
               <br />
-              {data.main.pressure}
-            </div>
-            <img className="circle mb-3" src="sun.svg" width="170px" alt="" />
-          </Col>
-        </Row>
-      )}
+              {data.main.pressure} */}
+          </h3>
+          <img
+            className="circle mb-3 ml-5"
+            src="sun.svg"
+            width="170px"
+            alt=""
+          />
+        </Col>
+      </Row>
+      {/* )} */}
     </>
   );
 }
