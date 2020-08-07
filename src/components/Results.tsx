@@ -117,7 +117,7 @@ export default function Results({ data }: result) {
             {data.weather[0]["main"] === "Mist" && (
               <img
                 className="circle mb-3 ml-5"
-                src="mist.svg"
+                src="fog.svg"
                 width="300px"
                 alt=""
               />
@@ -125,7 +125,7 @@ export default function Results({ data }: result) {
             {data.weather[0]["main"] === "Rain" && (
               <img
                 className="circle mb-3 ml-5"
-                src="fog.svg"
+                src="rain.svg"
                 width="300px"
                 alt=""
               />
