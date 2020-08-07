@@ -100,16 +100,11 @@ export default function Results({ data }: result) {
               */}
             </h3>
             {data.weather[0]["main"] === "Clear" && (
-              <img
-                className="circle mb-3 ml-5"
-                src="sun.svg"
-                width="300px"
-                alt=""
-              />
+              <img className="circle ml-5" src="sun.svg" width="300px" alt="" />
             )}
             {data.weather[0]["main"] === "Clouds" && (
               <img
-                className="circle mb-3 ml-5"
+                className="circle  ml-5"
                 src="suncloud.svg"
                 width="300px"
                 alt=""
@@ -117,7 +112,7 @@ export default function Results({ data }: result) {
             )}
             {data.weather[0]["main"] === "Mist" && (
               <img
-                className="circle mb-3 ml-5"
+                className="circle  ml-5"
                 src="fog.svg"
                 width="300px"
                 alt=""
@@ -125,7 +120,7 @@ export default function Results({ data }: result) {
             )}
             {data.weather[0]["main"] === "Rain" && (
               <img
-                className="circle mb-3 ml-5"
+                className="circle ml-5"
                 src="rain.svg"
                 width="300px"
                 alt=""

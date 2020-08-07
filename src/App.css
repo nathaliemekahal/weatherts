@@ -84,6 +84,7 @@ body {
   display: flex;
   justify-content: center;
   margin-right: -200px;
+  margin-top: 180px;
 }
 /*TEMP*/
 #temp {
