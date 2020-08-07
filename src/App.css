@@ -36,10 +36,12 @@ body {
   padding-bottom: 30px;
   font-weight: bolder;
   text-transform: uppercase;
+  margin-top: 28px;
 }
 .title-col-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
 }
 .clipart-col-container {
   display: flex;
@@ -52,7 +54,7 @@ body {
   animation: circle 6s linear infinite;
   display: flex;
   justify-content: center;
-  margin-right: -362px;
+  margin-right: -200px;
 }
 /*TEMP*/
 #temp {
@@ -62,12 +64,24 @@ body {
   font-size: 120px;
   font-weight: 400;
 }
+.details {
+  list-style: none;
+  font-size: 30px;
+  padding-top: 1rem;
+}
+.icon {
+  width: 50px;
+}
+.units {
+  font-weight: bolder;
+  font-size: 20px;
+}
 
 @keyframes circle {
   0% {
-    transform: rotate(0deg) translate(-100px) rotate(0deg);
+    transform: rotate(0deg) translate(-80px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translate(-100px) rotate(-360deg);
+    transform: rotate(360deg) translate(-80px) rotate(-360deg);
   }
 }

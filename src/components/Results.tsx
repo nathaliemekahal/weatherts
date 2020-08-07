@@ -59,32 +59,80 @@ interface SearchQuery {
 export default function Results({ data }: result) {
   return (
     <>
-      {/* {data.id !== 0 && ( */}
-      <Row md={2} className="results-wrapper">
-        <Col className="title-col-container">
-          <h1 className="title-class">{data.name}</h1>
-        </Col>
+      {data.id !== 0 && (
+        <Row md={2} className="results-wrapper">
+          <Col className="title-col-container">
+            <h1 className="title-class">{data.name}</h1>
+            <ul style={{ padding: 0 }}>
+              <li className="details">
+                <img className="icon" src="humidity.svg" />{" "}
+                <span>
+                  {" "}
+                  {data.main.humidity} <span className="units">%</span>
+                </span>
+              </li>
+              <li className="details">
+                <img className="icon" src="pressure.svg" />{" "}
+                <span>
+                  {" "}
+                  {data.main.pressure} <span className="units">hPa</span>{" "}
+                </span>
+              </li>
+              <li className="details">
+                <img className="icon" src="wind.svg" />{" "}
+                <span>
+                  {" "}
+                  {data.wind.speed} <span className="units">km/h</span>{" "}
+                </span>
+              </li>
+            </ul>
+          </Col>
 
-        <Col className="clipart-col-container">
-          <h3 id="temp">
-            {/* {Math.floor(data.main.temp - 273.15)} */}
-            12
-            {/* Feels like{" "}
+          <Col className="clipart-col-container">
+            <h3 id="temp">
+              {Math.floor(data.main.temp - 273.15)}C
+              {/* Feels like{" "}
               {data.main.feels_like - 273.15}
               <br />
               {data.main.humidity}
               <br />
-              {data.main.pressure} */}
-          </h3>
-          <img
-            className="circle mb-3 ml-5"
-            src="sun.svg"
-            width="170px"
-            alt=""
-          />
-        </Col>
-      </Row>
-      {/* )} */}
+              */}
+            </h3>
+            {data.weather[0]["main"] === "Clear" && (
+              <img
+                className="circle mb-3 ml-5"
+                src="sun.svg"
+                width="300px"
+                alt=""
+              />
+            )}
+            {data.weather[0]["main"] === "Clouds" && (
+              <img
+                className="circle mb-3 ml-5"
+                src="suncloud.svg"
+                width="300px"
+                alt=""
+              />
+            )}
+            {data.weather[0]["main"] === "Mist" && (
+              <img
+                className="circle mb-3 ml-5"
+                src="mist.svg"
+                width="300px"
+                alt=""
+              />
+            )}
+            {data.weather[0]["main"] === "Rain" && (
+              <img
+                className="circle mb-3 ml-5"
+                src="fog.svg"
+                width="300px"
+                alt=""
+              />
+            )}
+          </Col>
+        </Row>
+      )}
     </>
   );
 }
