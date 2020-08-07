@@ -4,6 +4,7 @@ import FormControl from "react-bootstrap/FormControl";
 import Button from "react-bootstrap/Button";
 import Results from "../components/Results";
 import Row from "react-bootstrap/Row";
+import { FiSearch } from "react-icons/fi";
 
 export default function SearchComp() {
   const [query, setQuery] = useState("");
@@ -72,19 +73,22 @@ export default function SearchComp() {
     <>
       <div className="circle-bg"></div>
       <div className="circle-bg2"></div>
-      <Row className="justify-content-start mt-2 ">
+      <div style={{ marginLeft: "-90px", marginTop: "20px" }}>
         <Form inline>
           <FormControl
             type="text"
-            placeholder="Search"
+            placeholder="Enter city"
             className="mr-sm-2"
             onChange={catchInput}
+            id="searchBar"
           />
-          <Button variant="outline-success" onClick={searchQuery}>
-            Search
+          <Button id="searchButton" onClick={searchQuery}>
+            <p>
+              <FiSearch />
+            </p>
           </Button>
         </Form>
-      </Row>
+      </div>
       {result && <Results data={result} />}
     </>
   );

@@ -47,6 +47,33 @@ body {
   display: flex;
   justify-content: center;
 }
+/* Search bar */
+
+#searchBar {
+  width: 200px;
+  border-radius: 40px;
+}
+#searchButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 1px solid black;
+
+  font-size: 24px;
+  color: black;
+  background-color: transparent;
+}
+#searchButton:hover {
+  background-color: white;
+}
+#searchButton p:hover {
+  cursor: pointer !important;
+  color: #00d7ff;
+}
+#searchButton p {
+  margin-top: -7px;
+  margin-left: -4px;
+}
 
 /*animation*/
 .circle {
