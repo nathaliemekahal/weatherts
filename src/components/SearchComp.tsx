@@ -73,7 +73,7 @@ export default function SearchComp() {
     <>
       <div className="circle-bg"></div>
       <div className="circle-bg2"></div>
-      <div style={{ marginLeft: "-90px", marginTop: "20px" }}>
+      <div style={{ marginLeft: "0px", marginTop: "40px" }}>
         <Form inline>
           <FormControl
             type="text"

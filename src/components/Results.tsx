@@ -90,7 +90,8 @@ export default function Results({ data }: result) {
 
           <Col className="clipart-col-container">
             <h3 id="temp">
-              {Math.floor(data.main.temp - 273.15)}C
+              {Math.floor(data.main.temp - 273.15)}{" "}
+              <span style={{ fontSize: "60px" }}>°C</span>
               {/* Feels like{" "}
               {data.main.feels_like - 273.15}
               <br />
