@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
@@ -13,6 +13,7 @@ function App() {
       <Router>
         <Container style={{ width: "100%", height: "100%" }}>
           <Route path="/" exact component={Login} />
+
           <Route path="/home" component={SearchComp} />
         </Container>
       </Router>

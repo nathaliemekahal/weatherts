@@ -32,6 +32,7 @@ export class Login extends Component<any, loginState> {
         "Content-type": "application/json",
       }),
       body: JSON.stringify(this.state.info),
+      credentials: include,
     });
     if (response.ok) {
       this.props.history.push("/home");

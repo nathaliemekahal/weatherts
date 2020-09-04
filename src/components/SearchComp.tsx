@@ -5,9 +5,11 @@ import Button from "react-bootstrap/Button";
 import Results from "../components/Results";
 import Row from "react-bootstrap/Row";
 import { FiSearch } from "react-icons/fi";
+import Favourites from "../components/Favourites";
 
 export default function SearchComp() {
   const [query, setQuery] = useState("");
+  const [favourites, setFavourites] = useState([]);
   const [result, setResult] = useState({
     coord: {
       lon: 0,
@@ -73,7 +75,10 @@ export default function SearchComp() {
     <>
       <div className="circle-bg"></div>
       <div className="circle-bg2"></div>
-      <div style={{ marginLeft: "0px", marginTop: "40px" }}>
+      <div
+        className="d-flex justify-content-between align-content-center"
+        style={{ marginLeft: "0px", marginTop: "40px" }}
+      >
         <Form inline>
           <FormControl
             type="text"
@@ -88,8 +93,10 @@ export default function SearchComp() {
             </p>
           </Button>
         </Form>
+
+        {result.weather[0].id !== 0 && <Favourites data={result} />}
       </div>
-      {result && <Results data={result} />}
+      {result.weather[0].id !== 0 && <Results data={result} />}
     </>
   );
 }
